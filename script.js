@@ -40,7 +40,7 @@ function deploy(custom_msg=null) {
 		console.log("Added cat image!");
 	});
 }
-if (today.slice(0, -5) == "8/4!") {
+if (today.slice(0, -5) == "8/4") {
 	message = "CHARLIE'S BIRTHDAY!";
 	deploy();
 } else if (today.slice(0, -5) == "2/4") {
