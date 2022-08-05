@@ -1,0 +1,128 @@
+#title-container {
+	font-size: 50px;
+}
+
+body {
+	background: #63458A;
+	/*background-image: linear-gradient(to bottom right, #63458A, #9A48D0);*/
+	background-image: linear-gradient(to right, #E4B7E5,#B288C0,#7E5A9B,#63458A);
+}
+
+h1 {
+	margin: 100px;
+	-webkit-text-stroke: 2.5px black;
+	background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+	-webkit-background-clip: text;
+    display: inline-block;
+    -webkit-text-fill-color: #00000000;
+    font-family: "Sofia";
+}
+
+h2 {
+	animation: swirl-in-fwd 0.6s ease-out both;
+	/*animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;*/
+	text-align: center;
+	font-family: "Bakbak One";
+}
+
+button {
+	width:50%;
+    margin-left:25%;
+    margin-right:25%;
+    position: absolute!important;
+ 	top: 60%!important;
+    transform: translateY(-50%);
+}
+
+.lottie-firework {
+	position: absolute;
+	bottom: 1;
+	/*animation-name: lottie-firework-up;*/
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+	animation-timing-function: fade-in;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+#cat {
+	pointer-events: none;
+}
+
+#cat > * {
+    animation: fly 50s linear infinite;
+    pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 10;
+}
+
+@keyframes fly {
+	98.001%, 0% {
+		display: block;
+		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+	}
+}
+
+@font-face {
+	font-family: "Forever Brush";
+	src: url("Forever Brush Script Demo.otf");
+}
+
+@keyframes swirl-in-fwd {
+	0% {
+		transform: rotate(-640deg) scale(0);
+		opacity: 0;
+	}
+	100% {
+		transform: rotate(0) scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-in-bck-center {
+  0% {
+	transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+	transform: translateZ(0);
+    opacity: 1;
+  }
+}
